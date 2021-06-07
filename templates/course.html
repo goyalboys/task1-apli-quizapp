@@ -1,0 +1,45 @@
+{% extends 'base.html' %}}
+{% block content %}
+      <style>
+          .co-link a {
+  display:block;
+  color: #000;
+  text-decoration:none;
+  padding:8px;
+  margin-bottom:15px;
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin-top:10px;
+  border-radius: 10px;
+ }
+.co-ink a:hover {
+  background-color: #fff;
+  text-decoration:none;
+}
+      </style>
+
+	<div>
+  <div class="container pt-4">
+    <div class="row  p-0 mt-4">
+      <div class="col-lg-4 mx-auto shadow p-0">
+        <div class="alert alert-info">
+          <h2>Courses</h2>
+        </div>
+        <div class="p-4">
+             <div class="co-link">
+        			{% for q in questions %}
+                         <a href='questions/{{q.id}}'>
+                              <span>
+
+				<h3> {{ q.id }}.  {{ q.course_name }}</h3>
+                     </span>
+             </a>
+			{% endfor %}
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}
